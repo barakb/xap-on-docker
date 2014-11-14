@@ -1,6 +1,7 @@
 A collection of scripts and dockerfile that help to run 2 XAP sites in docker containers on your machine.
 =========================================================================================================
 
+
 # Prerequisites
 1. docker
 2. docker [group](http://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
@@ -8,7 +9,7 @@ A collection of scripts and dockerfile that help to run 2 XAP sites in docker co
 
 # Building the docker image
 
-1. git clone https://github.com/barakb/Docker2SiteXap.git
+1. git clone https://github.com/barakb/xap-on-docker.git
 2. Download XAP zip and put it in the Docker2SiteXap dir.
 3. `cd Docker2SiteXap`
 4. Edit Dockerfile replace 'gigaspaces-xap-premium-10.1.0-m6-b12586-99.zip' with your XAP zip.
