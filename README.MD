@@ -10,8 +10,8 @@ A collection of scripts and dockerfile that help to run 2 XAP sites in docker co
 # Building the docker image
 
 1. git clone https://github.com/barakb/xap-on-docker.git
-2. Download XAP zip and put it in the Docker2SiteXap dir.
-3. `cd Docker2SiteXap`
+2. Download XAP zip and put it in the xap-on-docker dir.
+3. `cd xap-on-docker`
 4. Edit Dockerfile replace 'gigaspaces-xap-premium-10.1.0-m6-b12586-99.zip' with your XAP zip.
 5. `./rebuild.sh`
 
