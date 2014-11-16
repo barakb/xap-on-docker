@@ -1,4 +1,4 @@
-#!/bin/bash -x 
+#!/bin/bash 
 
 #The ip address of the hosting machine that will be added to the /etc/hosts of the containers will be taken from this network interface.
 interface=eth0
