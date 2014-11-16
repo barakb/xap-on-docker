@@ -25,7 +25,7 @@ WORKDIR /data
 #Install Unzip
 RUN apt-get install -y unzip
 
-RUN apt-get install -y vim
+# RUN apt-get install -y vim
 
 RUN apt-get install -y iptables
 
