@@ -3,7 +3,7 @@ A collection of scripts and dockerfile that help to run 2 XAP sites in docker co
 
 
 # Prerequisites
-1. docker
+1. docker 1.3.1 (check with `docker -v`)
 2. docker [group](http://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
 3. ip forwarding enabled  `sudo echo 1 > /proc/sys/net/ipv4/ip_forward`
 
