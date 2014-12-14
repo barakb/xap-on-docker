@@ -44,10 +44,10 @@ WORKDIR /data/xap/bin
 
 # ADD xap.sh /data/xap/bin/xap.sh
 
-Add gs-runtime.jar /data/xap/lib/required/gs-runtime.jar
-Add gs-boot.jar /data/xap/lib/platform/boot/gs-boot.jar
-Add hsqldb.jar /data/xap/bin/hsqldb.jar
-Add hsqldb.sh /data/xap/bin/hsqldb.sh
+#Add gs-runtime.jar /data/xap/lib/required/gs-runtime.jar
+#Add gs-boot.jar /data/xap/lib/platform/boot/gs-boot.jar
+#Add hsqldb.jar /data/xap/bin/hsqldb.jar
+#Add hsqldb.sh /data/xap/bin/hsqldb.sh
 
 CMD ["bash"]
 
