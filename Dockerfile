@@ -31,7 +31,7 @@ RUN apt-get install -y iptables
 
 
 #Install Xap
-ADD gigaspaces-xap-premium-10.1.0-m6-b12586-99.zip /data/xap.zip
+ADD gigaspaces-xap-premium-10.1.0-m7-b12587-480.zip /data/xap.zip
 RUN unzip xap.zip && rm -f xap.zip
 
 RUN p=`find /data/ -type d -name bin | awk '{ print length, $0 }' | sort -n | cut -d" " -f2- | head -1` && gigadir=${p//bin/} && mv $gigadir xap
@@ -42,7 +42,12 @@ RUN rm -rf /var/lib/apt/lists/* && rm -rf /var/cache/oracle-jdk8-installer
 
 WORKDIR /data/xap/bin
 
-ADD xap.sh /data/xap/bin/xap.sh
+# ADD xap.sh /data/xap/bin/xap.sh
+
+Add gs-runtime.jar /data/xap/lib/required/gs-runtime.jar
+Add gs-boot.jar /data/xap/lib/platform/boot/gs-boot.jar
+Add hsqldb.jar /data/xap/bin/hsqldb.jar
+Add hsqldb.sh /data/xap/bin/hsqldb.sh
 
 CMD ["bash"]
 

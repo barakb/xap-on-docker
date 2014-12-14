@@ -30,6 +30,9 @@ docker exec gs1 bash -c  "printf '%s\n%s\n%s\n%s\n' '#!/bin/bash' 'iptables --fl
 
 docker exec gs2 bash -c  "printf '%s\n%s\n%s\n%s\n' '#!/bin/bash' 'iptables --flush' 'iptables -I INPUT -s gs1 -j DROP'  'iptables -I OUTPUT -d gs1 -j DROP' > /data/xap/bin/disconnect.sh && chmod +x /data/xap/bin/disconnect.sh"
 
+docker exec gs1 bash -c  "printf '%s\n%s\n%s\n%s\n\n' '#!/bin/bash' 'iptables --flush' 'export LOOKUPLOCATORS=gs1,gs2'  'export LOOKUPGROUPS=$hostname' './gs-agent.sh' > /data/xap/bin/xap.sh && chmod +x /data/xap/bin/xap.sh"
+docker exec gs2 bash -c  "printf '%s\n%s\n%s\n%s\n\n' '#!/bin/bash' 'iptables --flush' 'export LOOKUPLOCATORS=gs1,gs2'  'export LOOKUPGROUPS=$hostname' './gs-agent.sh' > /data/xap/bin/xap.sh && chmod +x /data/xap/bin/xap.sh"
+
 
 ./update-hosts.sh "$gs1" "$gs2"
 
